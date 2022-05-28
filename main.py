@@ -21,14 +21,6 @@ class Info:
         self.names = soup.findAll('h3', class_="_h3_cuogz_1")
         self.description = soup.findAll('div', class_="_summary_1p2xe_21")
 
-    def get_names(self):
-        for i in self.names:
-            print(i.text)
-
-    def get_description(self):
-        for i in self.description:
-            print(i.text)
-
     def window(self):
         box = Tk()
 
