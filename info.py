@@ -45,11 +45,13 @@ class Info:
         self.name = []
         with open("Name_of_film.txt", encoding="utf8") as f:
             self.name = f.readlines()
+        self.name.append("over")
 
     def get_description(self):
         self.descriptions = []
         with open("Description_of_film.txt", encoding="utf8") as f:
             self.descriptions = f.readlines()
+        self.descriptions.append("over")
 
 
     def window(self):
@@ -89,7 +91,7 @@ class Info:
         if len(self.descriptions[self.y]) == 1:
                 self.y += 1
         self.Fact = self.descriptions[self.y]
-        if self.c > 100 and self.y > 100:
+        if self.c > 99 and self.y > 100:
             self.Fact = "OVER"
             self.label["text"] = "OVER"
             print("GOOD BYE")
